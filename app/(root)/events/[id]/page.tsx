@@ -104,14 +104,14 @@ const EventDetails = async ({
       {/* EVENTS with the same category */}
       <section className="wrapper my-8 flex flex-col gap-8 md:gap-12">
         <h2 className="h2-bold">Related Events</h2>
-        <Collection
+      <Collection 
           data={relatedEvents?.data}
           emptyTitle="No Events Found"
           emptyStateSubtext="Come back later"
-          collectionType="ALL_Events"
-          limit={6}
-          page={1}
-          totalPages={2}
+          collectionType="All_Events"
+          limit={3}
+          page={searchParams.page as string}
+          totalPages={relatedEvents?.totalPages}
         />
       </section>
     </>
