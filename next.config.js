@@ -1,10 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    disableStaticImages: true,
-    dangerouslyAllowSVG: true,
-    contentDispositionType: 'attachment',
-    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+    domains: ['utfs.io'],
+    remotePatterns: [
+      {
+        protocol:'https',
+        hostname:'utfs.io',
+        port: ''
+      }
+    ]
   },
 }
 
